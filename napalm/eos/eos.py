@@ -421,8 +421,6 @@ class EOSDriver(NetworkDriver):
 
         for line in lines:
             line = line.strip()
-            if line == "":
-                continue
             if line.startswith("!") and not line.startswith("!!"):
                 continue
             commands.append(line)
@@ -433,7 +431,7 @@ class EOSDriver(NetworkDriver):
             ]:
                 commands = self._multiline_convert(commands, start=start, depth=depth)
 
-        commands = self._mode_comment_convert(commands)
+            commands = self._mode_comment_convert(commands)
 
         if self.transport == "ssh":
             try:

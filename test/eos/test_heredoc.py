@@ -147,7 +147,7 @@ class TestConfigMangling(object):
         ]
 
         self.device.device.run_commands.assert_called_with(expected_result)
-    
+
     def test_heredoc_with_blank_lines(self):
         raw_config = dedent(
             """\

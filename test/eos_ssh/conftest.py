@@ -38,11 +38,11 @@ class PatchedEOSDriver(eos.EOSDriver):
 
     def __init__(self, hostname, username, password, timeout=60, optional_args=None):
 
-        optional_args = {
-            "transport": "ssh"
-        }
+        optional_args = {"transport": "ssh"}
 
-        super().__init__(hostname, username, password, timeout, optional_args=optional_args)
+        super().__init__(
+            hostname, username, password, timeout, optional_args=optional_args
+        )
 
         self.patched_attrs = ["device"]
         self.device = FakeEOSDevice()
@@ -56,13 +56,14 @@ class PatchedEOSDriver(eos.EOSDriver):
     def open(self):
         pass
 
+
 class FakeEOSDevice(BaseTestDouble):
     """EOS device test double."""
 
     def __init__(self):
         super(FakeEOSDevice, self).__init__()
         self.connection = object()
-    
+
     def send_command_expect(self, command, **kwargs):
         return self.send_config_set([command])
 

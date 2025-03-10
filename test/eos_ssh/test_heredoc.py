@@ -38,11 +38,10 @@ class TestConfigMangling(object):
             "HEREDOC conversion",
             "EOF",
             "management ssh",
-            "idle-timeout 15"
+            "idle-timeout 15",
         ]
 
         self.device.device.run_commands.assert_called_with(expected_result)
-
 
     def test_mode_comment(self):
         raw_config = dedent(
@@ -86,7 +85,7 @@ class TestConfigMangling(object):
             "This is a multi-line HEREDOC",
             "comment for standard ACL test3",
             "EOF",
-            "permit host 192.0.2.3"
+            "permit host 192.0.2.3",
         ]
 
         self.device.device.run_commands.assert_called_with(expected_result)
@@ -122,7 +121,7 @@ class TestConfigMangling(object):
             "!!!bangs!",
             "EOF",
             "management ssh",
-            "idle-timeout 15"
+            "idle-timeout 15",
         ]
 
         self.device.device.run_commands.assert_called_with(expected_result)
@@ -185,8 +184,7 @@ class TestConfigMangling(object):
             "---END PRIVATE KEY---",
             "EOF",
             "management ssh",
-            "idle-timeout 15"
+            "idle-timeout 15",
         ]
 
         self.device.device.run_commands.assert_called_with(expected_result)
-

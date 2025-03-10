@@ -68,4 +68,3 @@ class FakeEOSDevice(BaseTestDouble):
 
     def send_config_set(self, commands, **kwargs):
         return self.run_commands(commands)
-    

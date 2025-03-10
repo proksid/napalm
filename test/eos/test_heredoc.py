@@ -190,12 +190,12 @@ class TestConfigMangling(object):
             "ip name-server 192.0.2.1",
             {
                 "cmd": "banner login",
-                "input": "\nThis is a banner that spans\nmultiple lines in order to test\nHEREDOC conversion\n",
+                "input": "\nThis is a banner that spans\nmultiple lines in order to test\nHEREDOC conversion\n", #noqa
             },
             "management api http-commands",
             {
                 "cmd": "protocol https certificate",
-                "input": "---BEGIN CERTIFICATE---\nFAKE-CERTIFICATE-DATA\n---END CERTIFICATE---\nEOF\n---BEGIN PRIVATE KEY---\nFAKE-KEY-DATA\n---END PRIVATE KEY---",
+                "input": "---BEGIN CERTIFICATE---\nFAKE-CERTIFICATE-DATA\n---END CERTIFICATE---\nEOF\n---BEGIN PRIVATE KEY---\nFAKE-KEY-DATA\n---END PRIVATE KEY---", #noqa
             },
             "management ssh",
             "idle-timeout 15",

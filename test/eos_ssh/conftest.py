@@ -3,8 +3,6 @@
 from builtins import super
 
 import pytest
-import re
-from datetime import datetime
 
 from napalm.base.test import conftest as parent_conftest
 

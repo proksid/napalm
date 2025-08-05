@@ -7,9 +7,8 @@ jinja2
 netaddr
 pyYAML
 pyeapi>=1.0.2
-netmiko>=4.1.0
-junos-eznc>=2.7.0
-scp
+netmiko>=4.4.0
+junos-eznc>=2.7.4
 lxml>=4.3.0
 ncclient
 ttp
